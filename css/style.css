@@ -142,7 +142,9 @@ svg {
 .header-info .link:hover > .icon,
 .header-info .link:focus > .icon,
 .clients-list .link:hover > .icon,
-.clients-list .link:focus > .icon {
+.clients-list .link:focus > .icon
+.button-close:hover .icon,
+.button-close:focus .icon {
     fill: var(--accent-color);
 }
 
@@ -152,7 +154,6 @@ svg {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     max-width: 1600px;
     height: 600px;
     margin: 0 auto;
@@ -184,9 +185,10 @@ svg {
 .button.primary {
     display: block;
     min-width: 200px;
-    padding: 10px 32px;
-    border-color: transparent;
+    padding: 10px 0;
+    border: none;
     border-radius: 4px;
+    outline: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 
@@ -201,7 +203,7 @@ svg {
 }
 .button.primary:hover,
 .button.primary:focus {
-    background-color: #188ce8;
+    background-color: var(--button-accent-color);
 }
 /* отступы секции преимуществ */
 .section.feature {
@@ -212,6 +214,7 @@ svg {
 .flex {
     display: flex;
 }
+
 /* ширина элементов секции Преимущества */
 .feature-list .item {
     flex-basis: calc((100% - 3 * 30px) / 4);
@@ -242,7 +245,6 @@ svg {
 .feature-list .title {
     margin-top: 0;
     margin-bottom: 10px;
-
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
@@ -251,7 +253,6 @@ svg {
 .feature-list .text {
     margin-top: 0;
     margin-bottom: 0;
-
     color: var(--second-text-color);
 }
 /* паддинг всем секциям */
@@ -264,7 +265,6 @@ svg {
 .section-title {
     margin-top: 0;
     margin-bottom: 50px;
-
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
@@ -289,13 +289,12 @@ svg {
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-
     color: var(--main-bg-color);
 }
 
 /* оформление секции команда  */
 .section.team {
-    background-color: var(--secohd-bg-color);
+    background-color: var(--second-bg-color);
     text-align: center;
 }
 /* элементы списка наша команда */
@@ -311,7 +310,6 @@ svg {
 .team-list .title {
     margin-top: 30px;
     margin-bottom: 10px;
-
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -320,7 +318,6 @@ svg {
 .team-list .text {
     margin-top: 0;
     margin-bottom: 16px;
-
     color: var(--second-text-color);
     font-size: 16px;
     line-height: 1.19;
@@ -360,7 +357,7 @@ svg {
     fill: var(--icon-color);
     transition: fill 250ms var(--timing-function);
 }
-/* ширина элеентов секции клиенты */
+/* ширина элементов секции клиенты */
 .clients-list .item {
     flex-basis: calc((100% - 5 * 30px) / 6);
 }
@@ -389,7 +386,6 @@ svg {
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
-
     background-color: var(--third-bg-color);
 }
 .footer .flex {
@@ -398,9 +394,7 @@ svg {
 .footer-address,
 .footer-networks {
   width: 270px;
-}
-.footer-address {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 /* лого футера */
 .footer-logo {
@@ -413,25 +407,23 @@ svg {
 /* адрес футера */
 .footer-contacts {
     margin-top: 20px;
-
     font-style: normal;
 }
 /* Физический адрес в футере */
 .footer-address .text {
     margin: 0;
-
     color: var(--main-bg-color);
 }
 /* почта и телефон футера */
 .footer-contacts .link {
     display: inline-block;
     margin-top: 9px;
-
     color: rgba(255, 255, 255, 0.6);
     transition: color 250ms var(--timing-function);
 }
 /* текст блока соцсетей футера */
-.footer-networks .text {
+.footer-networks .text,
+.footer-subscribe .text {
     display: block;
     margin-bottom: 20px;
     line-height: 1.14;
@@ -444,8 +436,48 @@ svg {
 }
 /* цвет иконки в футере */
 .footer-networks .icon {
-    --color4: var(--main-bg-color);
+    fill: var(--main-bg-color);
 }
+.footer-subscribe {
+    width: 570px;
+}
+
+.footer-subscribe .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.footer-subscribe .icon {
+    margin-left: 10px;
+    fill: var(--main-bg-color);
+}
+
+.footer-subscribe .form-field {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.footer-subscribe .subscribe-input {
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+    padding: 15px;
+    color: var(--main-bg-color);
+    background-color: inherit;
+    outline: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.footer-subscribe .subcribe-input::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+}
+
 /* бэкдроп */
 .backdrop {
     position: fixed;
@@ -470,35 +502,118 @@ svg {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 528px;
-    min-height: 581px;
+    width: 528px;
+    height: 581px;
+    padding: 40px 0;
     background-color: var(--main-bg-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms var(--timing-function);
 }
 
 /* кнопка закрытия модального окна */
-.modal .button {
+.modal .button-close {
     position: absolute;
     top: 8px;
     right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0;
     width: 30px;
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     background-color: var(--main-bg-color);
+    cursor: pointer;
+}
+.modal .button-close .icon {
+    transform: fill 250ms var(--timing-function);
 }
 
-/* акцент для почты и телефона в футере */
-.footer-address .link:hover,
-.footer-address .link:focus {
-  color: var(--accent-color);
+.modal .text {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: var(--main-text-color);
+}
+
+.modal-form {
+    width: 448px;
+    margin: 0 auto;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-field .form-label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--second-text-color);
+}
+
+.form-field .input-block {
+    position: relative;
+}
+
+.form-field .input-block > .icon {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+}
+
+.form-field .form-input {
+    width: 100%;
+    margin: 0;
+    padding: 11px;
+    padding-left: 42px;
+    outline: 1px solid rgba(33, 33, 33, 0.2);
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.form-field .form-comment {
+    padding: 12px 16px;
+    height: 120px;
+    resize: none;
+}
+
+.form-field .form-comment::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form input[type="checkbox"] {
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+    border: 0.75px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: var(--main-text-color);
+}
+
+.modal-form .form-policy {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.modal-form .button {
+    margin: 0 auto;
+}
+
+.policy-label {
+    color: var(--second-text-color);
 }
 
 /* Страница Портфолио */
@@ -569,7 +684,7 @@ svg {
 }
 /* последним трем добавляем нижний марджин */
 .portfolio-list .item:nth-last-child(-n + 3) {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 .portfolio-list .link {
     display: block;
@@ -613,12 +728,6 @@ svg {
 .portfolio-list .link:hover .portfolio-overlay,
 .portfolio-list .link:focus .portfolio-overlay {
     transform: translateY(0);
-}
-.card-content {
-    padding: 20px 24px;
-    border-right: 1px solid #eeeeee;
-    border-bottom: 1px solid #eeeeee;
-    border-left: 1px solid #eeeeee;
 }
 
 /* заголовки элементов портфолио */
