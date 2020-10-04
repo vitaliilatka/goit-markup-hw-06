@@ -298,7 +298,7 @@ svg {
     text-align: center;
 }
 /* элементы списка наша команда */
-.team-list .item {
+.team-list > .item {
     flex-basis: calc((100% - 3 * 30px) / 4);
     border-radius: 0px 0px 4px 4px;
     background-color: var(--main-bg-color);
