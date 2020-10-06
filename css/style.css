@@ -274,18 +274,19 @@ svg {
     position: relative;
     flex-basis: calc((100% - 2 * 30px) / 3);
 }
-.examples-list .text {
+.examples-list .thumb {
     position: absolute;
     left: 0;
     bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 100%;
     height: 70px;
     margin: 0;
     background-color: rgba(47, 48, 58, 0.8);
+}
+.examples-list .text {
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
