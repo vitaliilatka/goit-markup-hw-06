@@ -345,8 +345,6 @@ svg {
 .network-list .link:hover,
 .network-list .link:focus {
     background-color: var(--accent-color);
-    fill: var(--icon-color);
-    transition: fill 250ms var(--timing-function);
 }
 /* меняем цвет самой иконки при ховере */
 .network-list .link:hover > .icon,
