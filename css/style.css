@@ -339,12 +339,15 @@ svg {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    transition: background-color 250ms var(--timing-function);
+    fill: var(--icon-color);
+    transition: background-color 250ms var(--timing-function),
+        fill 250ms var(--timing-function);
 }
 /* меняем фон ссылки при ховере */
 .network-list .link:hover,
 .network-list .link:focus {
     background-color: var(--accent-color);
+    fill: var(--main-bg-color);
 }
 /* меняем цвет самой иконки при ховере */
 .network-list .link:hover > .icon,
