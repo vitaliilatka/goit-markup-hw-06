@@ -355,8 +355,6 @@ svg {
 .network-list .icon {
     width: 20px;
     height: 20px;
-    fill: var(--icon-color);
-    transition: fill 250ms var(--timing-function);
 }
 /* ширина элементов секции клиенты */
 .clients-list .item {
