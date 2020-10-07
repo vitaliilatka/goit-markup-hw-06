@@ -340,8 +340,6 @@ svg {
     height: 44px;
     border-radius: 50%;
     transition: background-color 250ms var(--timing-function);
-    fill: var(--icon-color);
-    transition: fill 250ms var(--timing-function);
 }
 /* меняем фон ссылки при ховере */
 .network-list .link:hover,
