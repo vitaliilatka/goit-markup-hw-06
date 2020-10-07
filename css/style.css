@@ -189,7 +189,7 @@ svg {
     border: none;
     border-radius: 4px;
     outline: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 
     color: var(--main-bg-color);
@@ -566,23 +566,28 @@ svg {
 
 .form-field .input-block .icon {
     position: absolute;
-    top: 14px;
-    left: 15px;
+    top: 50%;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    transform: translateY(-50%);
+    transition: fill 250ms var(--timing-function);
 }
-
+/* поле ввода модалки */
 .form-field .form-input {
     width: 100%;
     margin: 0;
     padding: 11px;
     padding-left: 42px;
-    outline: 1px solid rgba(33, 33, 33, 0.2);
+    outline: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    transition: border-color 250ms var(--timing-function);
 }
 /* комментарий модалки */
 .form-field .form-comment {
     padding: 12px 16px;
-    height: 120px;
     resize: none;
 }
 
@@ -593,18 +598,10 @@ svg {
     color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-form input[type="checkbox"] {
-    width: 16px;
-    height: 15px;
-    margin-right: 8px;
-    border: 0.75px solid #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background-color: var(--main-text-color);
-}
-
 .modal-form .form-policy {
     margin-top: 20px;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .modal-form .button {
@@ -614,6 +611,8 @@ svg {
 .policy-label {
     color: var(--second-text-color);
 }
+
+
 
 /* Страница Портфолио */
 
