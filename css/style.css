@@ -350,6 +350,8 @@ svg {
 .network-list .link:hover > .icon,
 .network-list .link:focus > .icon {
     --color4: var(--main-bg-color);
+    fill: var(--icon-color);
+    transition: fill 250ms var(--timing-function);
 }
 /* иконка */
 .network-list .icon {
