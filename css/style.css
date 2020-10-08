@@ -532,6 +532,8 @@ svg {
 /* заголовок модалки */
 .modal .text {
     display: block;
+    max-width: 100%;
+    height: auto;
     margin-bottom: 12px;
     font-size: 20px;
     line-height: 1.15;
