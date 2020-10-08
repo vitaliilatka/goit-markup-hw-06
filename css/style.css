@@ -563,10 +563,7 @@ svg {
 .form-field .input-block .icon {
     position: absolute;
     top: 50%;
-    left: 12px;
-    width: 18px;
-    height: 18px;
-    fill: currentColor;
+    left: 15px;
     transform: translateY(-50%);
     transition: fill 250ms var(--timing-function);
 }
