@@ -532,7 +532,6 @@ svg {
 /* заголовок модалки */
 .modal .text {
     display: block;
-    max-width: 100%;
     margin-bottom: 12px;
     font-size: 20px;
     line-height: 1.15;
@@ -547,6 +546,7 @@ svg {
 .form-field {
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 
 .form-field .form-label {
@@ -561,17 +561,21 @@ svg {
     position: relative;
 }
 
-.form-field .input-block .icon {
+.form-field .input-icon {
     position: absolute;
-    width: 17px;
-    height: 28px;
-    top: 12px;
-    left: 10px;    
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    left: 12px;   
+    fill: currentColor;
+    transform: translateY(-50%);
+    transition: fill 250ms var(--timing-function);
 }
 /* поле ввода модалки */
 .form-field .form-input {
     width: 100%;
     margin: 0;
+    padding: 11px;
     padding-left: 42px;
     outline: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
