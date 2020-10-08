@@ -562,10 +562,10 @@ svg {
 
 .form-field .input-block .icon {
     position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    transition: fill 250ms var(--timing-function);
+    width: 18px;
+    height: 18px;
+    top: 12px;
+    left: 10px;    
 }
 /* поле ввода модалки */
 .form-field .form-input {
