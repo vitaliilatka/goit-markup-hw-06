@@ -603,8 +603,14 @@ svg {
     margin-bottom: 30px;
     text-align: center;
 }
-.policy-label {
+.policy-label .visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
     color: var(--second-text-color);
+    
 }
 .checkbox-custom {
     display: inline-block;
