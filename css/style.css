@@ -533,7 +533,6 @@ svg {
 .modal .text {
     display: block;
     max-width: 100%;
-    height: auto;
     margin-bottom: 12px;
     font-size: 20px;
     line-height: 1.15;
@@ -564,8 +563,8 @@ svg {
 
 .form-field .input-block .icon {
     position: absolute;
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 28px;
     top: 12px;
     left: 10px;    
 }
