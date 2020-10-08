@@ -566,7 +566,6 @@ svg {
     left: 12px;
     width: 18px;
     height: 18px;
-    fill: currentColor;
     transform: translateY(-50%);
     transition: fill 250ms var(--timing-function);
 }
